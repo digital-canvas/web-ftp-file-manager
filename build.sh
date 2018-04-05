@@ -51,4 +51,4 @@ if [ -f ftpmanager.zip ] ; then
     rm ftpmanager.zip
 fi
 zip -r ftpmanager.zip .
-tar --exclude=filemanager.zip -czvf ftpmanager.tar.gz *
+tar --exclude=ftpmanager.zip --exclude=ftpmanager.tar.gz -czvf ftpmanager.tar.gz *
