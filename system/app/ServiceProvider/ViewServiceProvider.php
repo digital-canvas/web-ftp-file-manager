@@ -49,6 +49,9 @@ class ViewServiceProvider extends AbstractServiceProvider
             'Illuminate\View\Engines\EngineResolver',
             function () {
                 $pathToCompiledTemplates = STORAGE_DIR . '/cache/view';
+                if ( ! is_dir($pathToCompiledTemplates)) {
+                    @mkdir($pathToCompiledTemplates, 0777, true);
+                }
                 $resolver      = new EngineResolver;
                 $filesystem    = $this->getContainer()->get('Illuminate\Filesystem\Filesystem');
                 $bladeCompiler = new BladeCompiler($filesystem, $pathToCompiledTemplates);

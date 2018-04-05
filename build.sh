@@ -31,6 +31,12 @@ fi
 if ! [ -d dist/system/storage/cache/view ] ; then
     mkdir -p -m 0777 dist/system/storage/cache/view
 fi
+if [ -d dist/system/storage/cache/view ] ; then
+    chmod 0777 dist/system/storage/session
+fi
+if ! [ -d dist/system/storage/session ] ; then
+    mkdir -p -m 0777 dist/system/storage/session
+fi
 
 rsync -rLkEtv --delete ./assets/ ./dist/assets
 cp .htaccess ./dist/.htaccess
@@ -45,4 +51,4 @@ if [ -f ftpmanager.zip ] ; then
     rm ftpmanager.zip
 fi
 zip -r ftpmanager.zip .
-tar -czvf --exclude=filemanager.zip ftpmanager.tar.gz *
+tar --exclude=filemanager.zip -czvf ftpmanager.tar.gz *

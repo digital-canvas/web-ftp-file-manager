@@ -1,4 +1,5 @@
 <?php
+
 namespace App\ServiceProvider;
 
 use League\Container\ServiceProvider\AbstractServiceProvider;
@@ -36,11 +37,30 @@ class SessionServiceProvider extends AbstractServiceProvider
     {
         $this->getContainer()->share(
             'Symfony\Component\HttpFoundation\Session\Session', function () {
-            $session = new Session(new NativeSessionStorage([], new NativeFileSessionHandler()));
+            if ( ! is_dir(STORAGE_DIR . '/session')) {
+                @mkdir(STORAGE_DIR . '/session', 0777, true);
+            }
+            // because we are using a custom session directory make sure gc is run by php itself
+            // Ubuntu disables this by default and uses a cron, this only works for the default session dir
+            $probability = ini_get('session.gc_probability');
+            if ($probability == 0) {
+                $probability = 1;
+            }
+            $session = new Session(
+                new NativeSessionStorage(
+                    [
+                        'gc_divisor'     => 1000,
+                        'gc_probability' => $probability,
+                    ],
+                    new NativeFileSessionHandler(STORAGE_DIR . '/session')
+                )
+            );
 
             return $session;
         }
         );
+
+
     }
 
 }
