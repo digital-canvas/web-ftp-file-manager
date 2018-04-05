@@ -1,0 +1,49 @@
+{
+    "name": "digitalcanvas/ftpmanager",
+    "description": "Web FTP file manager",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Bernardi",
+            "email": "jonathan@digitalcanvas.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "system/functions.php"
+        ],
+        "classmap": [
+            "system/framework/Route.php"
+        ],
+        "psr-4": {
+            "Framework\\": "system/framework/",
+            "App\\": "system/app/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "vendor-dir": "system/vendor",
+        "bin-dir": "bin",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "require": {
+        "php": ">=7.1",
+        "illuminate/config": "^5.6",
+        "illuminate/container": "^5.6",
+        "illuminate/contracts": "^5.6",
+        "illuminate/http": "^5.6",
+        "illuminate/routing": "^5.6",
+        "illuminate/support": "^5.6",
+        "illuminate/view": "^5.6",
+        "league/container": "^2.4",
+        "ramsey/uuid": "^3.7",
+        "spekkionu/domain-dispatcher": "^1.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.0"
+    }
+}

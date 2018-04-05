@@ -1,0 +1,6 @@
+/system/vendor
+/node_modules
+/dist
+composer.phar
+/system/configs/config.local.php
+yarn-error.log
