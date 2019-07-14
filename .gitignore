@@ -4,3 +4,4 @@
 composer.phar
 /system/configs/config.local.php
 yarn-error.log
+/bin

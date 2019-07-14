@@ -38,7 +38,7 @@
     </footer>
 
 </div>
-
+<script src="{{ asset('runtime.js') }}"></script>
 <script src="{{ asset('app.js') }}"></script>
 @stack('footer')
 </body>
