@@ -14,7 +14,9 @@ class TailwindExtractor {
 }
 
 Encore
-// the project directory where all compiled assets will be stored
+    .enableSingleRuntimeChunk()
+
+    // the project directory where all compiled assets will be stored
     .setOutputPath(path.resolve(__dirname, 'assets/build'))
 
     // the public path used by the web server to access the previous directory
@@ -49,8 +51,8 @@ Encore
     .enableVersioning(Encore.isProduction())
 
     .configureBabel(function (babelConfig) {
-        babelConfig.plugins.push('transform-object-rest-spread');
-        babelConfig.plugins.push('syntax-dynamic-import');
+        //babelConfig.plugins.push('@babel/plugin-proposal-object-rest-spread');
+        //babelConfig.plugins.push('@babel/plugin-syntax-dynamic-import');
     });
 
 if (Encore.isProduction()) {
