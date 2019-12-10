@@ -2,7 +2,7 @@
     <div>
         <div v-if="!loaded">
 
-            <div class="bg-teal-400 border-t-4 border-teal-500 rounded-b text-teal-700 px-4 py-3 shadow-md"
+            <div class="bg-teal-200 border-t-4 border-teal-500 rounded-b text-teal-700 px-4 py-3 shadow-md"
                  role="alert">
                 <div class="flex items-center">
                     <div class="py-1 mr-4"><i class="fas fa-spinner fa-pulse"></i></div>
@@ -49,7 +49,7 @@
                     <input class="shadow appearance-none border flex-1 py-2 px-3 text-gray-600" type="text"
                            v-model="create.directory" placeholder="Directory Name">
 
-                    <button class="bg-blue hover:bg-blue-600 text-white px-4 py-2 ml-2" @click="mkdir"
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 ml-2" @click="mkdir"
                             :disabled="!validDir">Create
                     </button>
                     <button class="bg-gray-400 hover:bg-gray-500 text-black px-4 py-2 ml-2" @click="hideCreate">Cancel
