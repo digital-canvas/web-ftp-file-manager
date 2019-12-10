@@ -1,24 +1,24 @@
 <template>
     <div v-if="show" class=" border   px-4 py-3 rounded relative" :class="{
-    'bg-red-lightest': error,
-    'border-red-light': error,
-    'text-red-dark': error,
+    'bg-red-300': error,
+    'border-red-400': error,
+    'text-red-700': error,
 
-    'bg-orange-lightest': warning,
-    'border-orange-light': warning,
-    'text-orange-dark': warning,
+    'bg-orange-300': warning,
+    'border-orange-400': warning,
+    'text-orange-700': warning,
 
-    'bg-green-lightest': success,
-    'border-green-light': success,
-    'text-green-dark': success,
+    'bg-green-300': success,
+    'border-green-400': success,
+    'text-green-700': success,
 
-    'bg-blue-lightest': info,
-    'border-blue-light': info,
-    'text-blue-dark': info,
+    'bg-blue-300': info,
+    'border-blue-400': info,
+    'text-blue-700': info,
 
     }" role="alert">
         <span class="block sm:inline" v-text="message"></span>
-        <span class="absolute pin-t pin-b pin-r px-4 py-3">
+        <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
     <svg class="fill-current h-6 w-6 " :class="{
         'text-red': error,
     }" @click="hide" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>

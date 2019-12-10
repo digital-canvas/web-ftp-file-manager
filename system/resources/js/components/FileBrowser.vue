@@ -2,7 +2,7 @@
     <div>
         <div v-if="!loaded">
 
-            <div class="bg-teal-lightest border-t-4 border-teal rounded-b text-teal-darkest px-4 py-3 shadow-md"
+            <div class="bg-teal-400 border-t-4 border-teal-500 rounded-b text-teal-700 px-4 py-3 shadow-md"
                  role="alert">
                 <div class="flex items-center">
                     <div class="py-1 mr-4"><i class="fas fa-spinner fa-pulse"></i></div>
@@ -21,17 +21,17 @@
                     <i class="fas fa-sync"></i>
                 </button>
 
-                <button v-if="directory != '/'" class="px-4 py-2 text-white bg-blue hover:bg-blue-dark" @click="up()"
+                <button v-if="directory != '/'" class="px-4 py-2 text-white bg-blue-500 hover:bg-blue-600" @click="up()"
                         title="Move up a directory">
                     <i class="fas fa-arrow-up"></i>
                     Up
                 </button>
-                <button class="px-4 py-2 text-white bg-green hover:bg-green-dark" title="Create a Directory"
+                <button class="px-4 py-2 text-white bg-green-500 hover:bg-green-600" title="Create a Directory"
                         @click="showCreate">
                     <i class="fas fa-folder"></i>
                     Create Directory
                 </button>
-                <button class="px-4 py-2 text-white bg-green hover:bg-green-dark" title="Upload a file"
+                <button class="px-4 py-2 text-white bg-green-500 hover:bg-green-600" title="Upload a file"
                         @click="showUpload">
                     <i class="fas fa-upload"></i>
                     Upload
@@ -46,13 +46,13 @@
 
             <div v-if="create.show">
                 <div class="my-4 flex">
-                    <input class="shadow appearance-none border flex-1 py-2 px-3 text-grey-darker" type="text"
+                    <input class="shadow appearance-none border flex-1 py-2 px-3 text-gray-600" type="text"
                            v-model="create.directory" placeholder="Directory Name">
 
-                    <button class="bg-blue hover:bg-blue-dark text-white px-4 py-2 ml-2" @click="mkdir"
+                    <button class="bg-blue hover:bg-blue-600 text-white px-4 py-2 ml-2" @click="mkdir"
                             :disabled="!validDir">Create
                     </button>
-                    <button class="bg-grey hover:bg-grey-dark text-black px-4 py-2 ml-2" @click="hideCreate">Cancel
+                    <button class="bg-gray-400 hover:bg-gray-500 text-black px-4 py-2 ml-2" @click="hideCreate">Cancel
                     </button>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 ></uploader>
 
                 <div class="mt-2">
-                    <button class="bg-grey hover:bg-grey-dark text-black px-4 py-2" @click="hideUpload">Cancel</button>
+                    <button class="bg-gray-400 hover:bg-gray-500 text-black px-4 py-2" @click="hideUpload">Cancel</button>
                 </div>
             </div>
 
@@ -83,7 +83,7 @@
                 <tbody>
                 <tr v-for="file in files">
                     <td>
-                        <a class="text-blue hover:text-purple-darker" href="#" v-if="file.type == 'dir'"
+                        <a class="text-blue-500 hover:text-purple-600" href="#" v-if="file.type == 'dir'"
                            title="Change directory" @click="chdir(file.name)">
                             <i class="fas fa-folder"></i>
                             {{ file.name }}
@@ -98,7 +98,7 @@
                             <i class="fas fa-download"></i>
                         </a>
                         <button @click="showDelete(file)" v-if="['dir', 'file'].includes(file.type)"
-                                class="bg-transparent fas-fa-trash-alt text-red-dark mx-2" title="Delete">
+                                class="bg-transparent fas-fa-trash-alt text-red-600 mx-2" title="Delete">
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </td>
@@ -106,7 +106,7 @@
                 </tbody>
             </table>
 
-            <div class="text-red bg-red-lightest p-4" v-if="files.length == 0">Directory is empty</div>
+            <div class="text-red-600 bg-red-400 p-4" v-if="files.length == 0">Directory is empty</div>
         </div>
 
 

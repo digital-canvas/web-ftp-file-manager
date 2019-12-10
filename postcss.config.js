@@ -5,7 +5,7 @@ module.exports = {
         // include whatever plugins you want
         // but make sure you install these via yarn or npm!
         require('postcss-easy-import'),
-        tailwindcss('./tailwind.js'),
+        tailwindcss('./tailwind.config.js'),
 
         // add browserslist config to package.json (see below)
         require('autoprefixer')

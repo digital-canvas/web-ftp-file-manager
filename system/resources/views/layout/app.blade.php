@@ -16,9 +16,9 @@
 </head>
 <body>
 <div id="app" class="flex flex-col min-h-screen">
-    <header class="bg-teal-dark text-white py-4">
+    <header class="bg-teal-600 text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1>{{ config('app.name', 'Web FTP Manager') }}</h1>
+            <div class="text-5xl font-bold">{{ config('app.name', 'Web FTP Manager') }}</div>
 
             @if(auth()->check())
                 <a class="text-white no-underline" href="#" onclick="document.getElementById('form-logout').submit();">Log Out</a>

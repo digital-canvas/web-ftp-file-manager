@@ -7,21 +7,10 @@
  *
  * If using `postcss-import`, use this import instead:
  *
- * @import "tailwindcss/preflight";
+ * @import "tailwindcss/base";
  */
-/*@tailwind preflight;*/
-@import "tailwindcss/preflight";
-
-
-/**
- * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
- */
-/*@tailwind components;*/
-@import "tailwindcss/components";
+/*@tailwind base;*/
+@import "tailwindcss/base";
 
 /**
  * Here you would add any of your custom component classes; stuff that you'd
@@ -42,6 +31,17 @@
 /*@import "_variables.css";*/
 @import "_fonts.css";
 @import "_base.css";
+
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+/*@tailwind components;*/
+@import "tailwindcss/components";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
