@@ -1,7 +1,6 @@
 var Encore = require('@symfony/webpack-encore');
 const path = require('path');
 let glob = require("glob-all");
-let PurgecssPlugin = require("purgecss-webpack-plugin");
 
 // Custom PurgeCSS extractor for Tailwind that allows special characters in
 // class names.
@@ -54,27 +53,6 @@ Encore
         //babelConfig.plugins.push('@babel/plugin-proposal-object-rest-spread');
         //babelConfig.plugins.push('@babel/plugin-syntax-dynamic-import');
     });
-
-if (Encore.isProduction()) {
-
-    Encore.addPlugin(new PurgecssPlugin({
-
-        // Specify the locations of any files you want to scan for class names.
-        paths: glob.sync([
-            path.join(__dirname, "system/resources/views/**/*.blade.php"),
-            path.join(__dirname, "system/resources/js/components/**/*.vue")
-        ]),
-        extractors: [
-            {
-                extractor: TailwindExtractor,
-
-                // Specify the file extensions to include when scanning for
-                // class names.
-                extensions: ["html", "js", "php", "vue"]
-            }
-        ]
-    }));
-}
 
 
 const config = Encore.getWebpackConfig();

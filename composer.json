@@ -32,15 +32,15 @@
     },
     "require": {
         "php": ">=7.1",
-        "illuminate/config": "^6.7",
-        "illuminate/container": "^6.7",
-        "illuminate/contracts": "^6.7",
-        "illuminate/http": "^6.7",
-        "illuminate/routing": "^6.7",
-        "illuminate/support": "^6.7",
-        "illuminate/view": "^6.7",
+        "illuminate/config": "^7.4",
+        "illuminate/container": "^7.4",
+        "illuminate/contracts": "^7.4",
+        "illuminate/http": "^7.4",
+        "illuminate/routing": "^7.4",
+        "illuminate/support": "^7.4",
+        "illuminate/view": "^7.4",
         "league/container": "^2.4",
-        "ramsey/uuid": "^3.9",
+        "ramsey/uuid": "^4.0",
         "spekkionu/domain-dispatcher": "^1.0"
     },
     "require-dev": {
