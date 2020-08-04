@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 
 if ! [ -d node_modules ] ; then
     echo "Install npm dependencies"
-    yarn
+    pnpm install
 fi
 
 echo "Compile production assets"
