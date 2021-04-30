@@ -1,70 +1,46 @@
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/base";
- */
-/*@tailwind base;*/
-@import "tailwindcss/base";
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab:300,400,700|Roboto:400,400i,700,900');
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/*@import "_variables.css";*/
-@import "_fonts.css";
-@import "_base.css";
+@layer base {
 
 
-/**
- * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
- */
-/*@tailwind components;*/
-@import "tailwindcss/components";
+	:root {
+		--table-border-color: #b8c2cc;
+	}
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/utilities";
- */
-/*@tailwind utilities;*/
-@import "tailwindcss/utilities";
+	a {
+		text-decoration: none;
+	}
 
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
+	a:hover {
+		text-decoration: underline;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th, td {
+		border-bottom: solid 1px var(--table-border-color);
+		text-align: left;
+		padding: .75rem;
+		vertical-align: top;
+	}
+
+	thead th {
+		vertical-align: bottom;
+		border-bottom: 2px solid var(--table-border-color);
+		font-weight: bold;
+	}
+
+	.table-striped tbody tr:nth-of-type(2n+1) {
+		background-color: rgba(0, 0, 0, .05);
+	}
+
+}
+

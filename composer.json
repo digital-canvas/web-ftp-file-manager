@@ -31,16 +31,16 @@
         "optimize-autoloader": true
     },
     "require": {
-        "php": ">=7.1",
-        "illuminate/config": "^7.4",
-        "illuminate/container": "^7.4",
-        "illuminate/contracts": "^7.4",
-        "illuminate/http": "^7.4",
-        "illuminate/routing": "^7.4",
-        "illuminate/support": "^7.4",
-        "illuminate/view": "^7.4",
-        "league/container": "^2.4",
-        "ramsey/uuid": "^4.0",
+        "php": ">=7.4",
+        "illuminate/config": "^8.40",
+        "illuminate/container": "^8.40",
+        "illuminate/contracts": "^8.40",
+        "illuminate/http": "^8.40",
+        "illuminate/routing": "^8.40",
+        "illuminate/support": "^8.40",
+        "illuminate/view": "^8.40",
+        "league/container": "^2.5",
+        "ramsey/uuid": "^4.1",
         "spekkionu/domain-dispatcher": "^1.0"
     },
     "require-dev": {
