@@ -14,7 +14,7 @@
         "glob-all": "^3.2.1",
         "postcss": "^8.2.12",
         "postcss-loader": "^5.2.0",
-        "resolve-url-loader": "3.1.2",
+        "resolve-url-loader": "3.1.4",
         "tailwindcss": "2.1.2",
         "v-file-upload": "^3.1.7",
         "vue": "^2.6.12",
