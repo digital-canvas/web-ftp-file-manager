@@ -1,5 +1,5 @@
 module.exports = {
-    purge: [
+    content: [
         "./system/resources/views/**/*.blade.php",
         "./system/resources/js/components/**/*.vue",
     ],
@@ -8,7 +8,6 @@ module.exports = {
 
         },
     },
-    variants: {},
     plugins: [
 
     ]
