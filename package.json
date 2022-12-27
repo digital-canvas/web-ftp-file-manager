@@ -7,7 +7,7 @@
         "@babel/plugin-syntax-dynamic-import": "^7.8.3",
         "@babel/plugin-transform-runtime": "^7.16.10",
         "@babel/preset-env": "^7.16.10",
-        "@symfony/webpack-encore": "^1.7.0",
+        "@symfony/webpack-encore": "^2.0.0",
         "autoprefixer": "^10.4.2",
         "axios": "^0.25.0",
         "babel-loader": "^8.2.3",
@@ -19,7 +19,7 @@
         "v-file-upload": "^3.1.7",
         "vue": "^2.6.14",
         "vue-js-modal": "^2.0.1",
-        "vue-loader": "^15.9.8",
+        "vue-loader": "^16.0.0",
         "vue-template-compiler": "^2.6.14",
         "vue2-dropzone": "^3.6.0",
         "webpack-notifier": "^1.15.0"
