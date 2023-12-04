@@ -19,7 +19,7 @@
         "v-file-upload": "^3.1.7",
         "vue": "^2.6.14",
         "vue-js-modal": "^2.0.1",
-        "vue-loader": "^15.9.8",
+        "vue-loader": "^16.0.0",
         "vue-template-compiler": "^2.6.14",
         "vue2-dropzone": "^3.6.0",
         "webpack-notifier": "^1.15.0"
