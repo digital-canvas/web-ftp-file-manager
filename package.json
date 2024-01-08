@@ -9,7 +9,7 @@
         "@babel/preset-env": "^7.16.10",
         "@symfony/webpack-encore": "^1.7.0",
         "autoprefixer": "^10.4.2",
-        "axios": "^0.25.0",
+        "axios": "^1.6.4",
         "babel-loader": "^8.2.3",
         "glob-all": "^3.2.1",
         "postcss": "^8.4.5",
